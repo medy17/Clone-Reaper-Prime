@@ -97,7 +97,7 @@ You can edit this file directly if you prefer, but it's generally safer to manag
 }
 ```
 
-## ⚠️ A Note on Safety
+## ⚠️ Backup Your Files
 
 This is a powerful tool that can delete a large number of files. Please follow these best practices:
 
