@@ -31,7 +31,7 @@ CloneReaper Prime is designed to be simple to set up.
 
 2.  **Clone the repository:**
     ```bash
-    git clone https://github.com/medy17/Clone_Reaper-Prime.git
+    git clone https://github.com/medy17/Clone-Reaper-Prime.git
     cd Clone-Reaper-Prime
     ```
 
