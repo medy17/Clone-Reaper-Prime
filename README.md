@@ -1,6 +1,6 @@
 # CloneReaper Prime
 
-CloneReaper Prime is an advanced, cross-platform duplicate file finder and manager written in Python. It's designed to be both powerful for automated tasks and safe and easy to use through its interactive menu. Find duplicate files, recover precious disk space, and manage your data with confidence.
+CloneReaper Prime is an advanced, cross-platform duplicate file finder and manager written in Python. It's designed to be both powerful for automated tasks and safe and easy to use through its interactive menu. Find duplicate files, recover precious disk space, and manage your data with confidence. It is a direct descendant of CloneReaper but rewritten to make managing your data and logging changes much easier.
 
 ## Key Features
 
