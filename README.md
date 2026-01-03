@@ -5,6 +5,7 @@ CloneReaper Prime is an advanced, cross-platform duplicate file finder and manag
 ## Key Features
 
 -   [x] **High-Performance Scanning:** Uses parallel processing (`multiprocessing`) to hash files and find duplicates quickly, especially on multi-core systems.
+-   [x] **File Pattern Filtering:** Include or exclude files based on patterns (e.g., `*.jpg`, `!*.tmp`).
 -   [x] **Email Notifications:** Configure SMTP settings to have scan reports automatically emailed to you upon completion. Guided setup for first time users.
 -   [x] **Efficient Two-Stage Scan:** First identifies files of the same size, then only hashes those potential duplicates, saving significant time.
 -   [x] **Safety First Approach:**
@@ -50,11 +51,11 @@ You can run CloneReaper Prime in two modes: Interactive (recommended for first-t
 Simply run the script without any arguments to launch the full menu-driven interface.
 
 ```bash
-python CloneReaperPrimeProd.py
+python run_clonereaper.py
 ```
 
 You will be guided through a series of menus to:
-1.  **Configure Scan Settings:** Set the target directory, minimum file size, and hashing algorithm.
+1.  **Configure Scan Settings:** Set the target directory, minimum file size, hashing algorithm, and file patterns.
 2.  **Configure Actions:** Choose what to do with duplicates (Quarantine, Delete, Link) and enable Dry Run mode.
 3.  **Configure Reporting & Email:** Set up report generation and email notifications.
 4.  **Run the Scan:** Execute the scan and review the results.
@@ -67,7 +68,13 @@ CloneReaper Prime can be run from the command line, making it perfect for schedu
 **Example:** Scan a directory, permanently delete duplicates, and generate a JSON report.
 
 ```bash
-python CloneReaperPrimeProd.py /path/to/your/media --non-interactive --action delete --report-format json
+python run_clonereaper.py /path/to/your/media --non-interactive --action delete --report-format json
+```
+
+**Example:** Scan only jpg files and ignore temp files.
+
+```bash
+python run_clonereaper.py /path/to/your/media --non-interactive --action none --file-patterns "*.jpg" "!*.tmp"
 ```
 
 > **Note:** When using `--non-interactive`, the script will not ask for confirmation. Use with caution!
@@ -86,6 +93,7 @@ You can edit this file directly if you prefer, but it's generally safer to manag
   "hash_algo": "sha256",
   "action_mode": "quarantine",
   "dry_run": false,
+  "file_patterns": ["*.mp4", "*.mkv", "!sample*"],
   "email_config": {
     "enabled": true,
     "server": "smtp.gmail.com",
